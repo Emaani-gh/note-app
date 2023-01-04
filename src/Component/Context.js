@@ -7,7 +7,7 @@ export const Provider = (props)=>{
     const [notes,setNotes] = useState([])
 
     const fetchNotes = ()=>{
-        fetch('http://localhost:3000/api/notes')
+        fetch('https://note-api-du6k.onrender.com/api/notes')
         .then(res=>res.json())
         .then(data=>setNotes(data))
     }

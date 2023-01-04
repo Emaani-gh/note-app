@@ -20,7 +20,7 @@ export const NewNote = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        fetch('http://localhost:3000/api/notes',{
+        fetch('https://note-api-du6k.onrender.com/api/notes',{
             method : "POST",
             headers : {
                 'Content-Type' : 'application/json'

@@ -23,7 +23,7 @@ export const NoteDetails = () => {
     const handleUpdate = (e)=>{
         e.preventDefault();
 
-        fetch(`http://localhost:3000/api/notes/${id}`,{
+        fetch(`https://note-api-du6k.onrender.com/api/notes/${id}`,{
             method : "Put",
             headers : {
                 'Content-Type' : 'application/json',
@@ -39,7 +39,7 @@ export const NoteDetails = () => {
     const handleDelete = (e)=>{
         e.preventDefault();
 
-        fetch(`http://localhost:3000/api/notes/${id}`,{
+        fetch(`https://note-api-du6k.onrender.com/api/notes/${id}`,{
             method : "Delete",
             headers : {
                 'Content-Type' : 'application/json'
@@ -58,7 +58,7 @@ export const NoteDetails = () => {
     }
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/api/notes/${id}`)
+        fetch(`https://note-api-du6k.onrender.com/api/notes/${id}`)
         .then(res=>res.json())
         .then(data=>setNote(data))
     },[])
